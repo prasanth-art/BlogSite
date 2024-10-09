@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <h2>Create a New Blog</h2>
+    <form 
+    [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="BlogName">Blog Name:</label>
+        <input style="border-color: aquamarine;" id="BlogName" formControlName="BlogName" type="text" class="form-control"/>
+        <div *ngIf="blogForm.get('BlogName')?.invalid && blogForm.get('BlogName')?.touched">
+            <p style="color: red;">Blog Name is required.Blog Name must be atleast 20 characters.</p>
+        </div>
+    </div>
+
+    <!-- Category -->
+    <div class="mb-3">
+        <label for="Category">Category:</label>
+        <input style="border-color: aquamarine;" id="Category" formControlName="Category" type="text" class="form-control" />
+        <div *ngIf="blogForm.get('Category')?.invalid && blogForm.get('Category')?.touched">
+            <p style="color: red;">Category is required.Category must be atleast 20 characters.</p>
+        </div>
+    </div>
+
+    <!-- Article -->
+    <div class="mb-3">
+        <label for="Article">Article:</label>
+        <textarea style="border-color: aquamarine;" id="Article" formControlName="Article" class="form-control"></textarea>
+        <div *ngIf="blogForm.get('Article')?.invalid && blogForm.get('Article')?.touched">
+            <p style="color:red;">Article is required.Category must be atleast 20 characters.</p>
+        </div>
+    </div>
+
+    <!-- Author -->
+    <div class="mb-3">
+        <label for="AuthorName">Author:</label>
+        <input style="border-color: aquamarine;" id="AuthorName" formControlName="AuthorName" type="text" class="form-control"/>
+        <div *ngIf="blogForm.get('AuthorName')?.invalid && blogForm.get('AuthorName')?.touched">
+            <p style="color: red;">Author is required.</p>
+        </div>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary" [disabled]="blogForm.invalid">Create Blog</button>
+    </div>
+
+    </form>
+</div>

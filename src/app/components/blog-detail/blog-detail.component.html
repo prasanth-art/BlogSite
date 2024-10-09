@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <ng-container *ngIf="blog";else="loading">
+        <h2>{{blog.blogName}}</h2>
+        <p><strong>AuthorName:</strong>
+            {{blog.authorName}}</p>
+        <p><strong>TimeStamp:</strong>
+            {{blog.timeStamp | date}}</p>
+        <a routerLink="/">Back to Blog List</a>
+    </ng-container>
+
+    <ng-template #loading>
+        <p>Loading blog details...</p>
+    </ng-template>
+</div>

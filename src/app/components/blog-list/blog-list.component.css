@@ -1,0 +1,29 @@
+.list-group-item {
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+    background-color: blanchedalmond
+}
+
+.container {
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+    padding: 20px;
+    background-color: blanchedalmond;
+}
+
+.card {
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+    border-color: silver;
+}
+
+.card-body {
+    text-align: left;
+    background-color: silver;
+}
+
+.card-footer {
+    background-color: silver;
+}
+
+.card-footer .btn {
+    margin-right: 5px;
+}
